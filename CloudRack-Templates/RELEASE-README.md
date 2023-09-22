@@ -7,6 +7,6 @@
 ---
 > Description of what was done this version release
 ---
-> To Understand how to install please check this release [LOCATED HERE](https://github.com/cloudrack-ca/Cloudrack-CasaOS-App-Repo/releases/tag/v.0.0.0.1)
+> To Understand how to install please check this release [LOCATED HERE](https://github.com/cloudrack-ca/Cloudrack-CasaOS-App-Repo/releases/tag/v.0.0.1)
 ---
 ### To see All Releases [CLICK HERE](https://github.com/cloudrack-ca/Cloudrack-CasaOS-App-Repo/releases)

@@ -46,9 +46,6 @@ https://github.com/cloudrack-ca/Cloudrack-CasaOS-App-Repo/archive/refs/heads/mas
 ```
 ![Step 3](https://raw.githubusercontent.com/WisdomSky/CasaOS-LinuxServer-AppStore/main/tip-3.jpg)
 - Wait for the installation to finish. Done!
-# Get Social
----
-<iframe src="https://e.widgetbot.io/channels/1154471425663574039/1154473702210150491" allow="clipboard-write; fullscreen" height="600" width="630"></iframe>
 ---
 ### **NOTE: Custom Appstore is only supported on CasaOS version [`0.4.4`](https://blog.casaos.io/blog/32.html)**
 ---

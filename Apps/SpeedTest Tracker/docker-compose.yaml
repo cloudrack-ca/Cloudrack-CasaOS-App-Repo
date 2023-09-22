@@ -1,0 +1,41 @@
+name: speedtest-tracker
+services:
+  app:
+    image: henrywhitaker3/speedtest-tracker:v1.12.3-dev
+    restart: unless-stopped
+    environment:
+      PGID: $PGID
+      PUID: $PUID
+      TZ: $TZ
+      OOKLA_EULA_GDPR: true
+    x-casaos:
+      envs:
+        - container: OOKLA_EULA_GDPR
+          description:
+            en_us: ''
+    ports:
+      - target: 80
+        published: 8765
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: /DATA/AppData/$AppID/config
+        target: /config
+x-casaos:
+  architectures:
+    - amd64
+    - arm
+    - arm64
+  main: app
+  description:
+    en_us: Run a Speedtest every hour and graph the results.  See https://hub.docker.com/r/henrywhitaker3/speedtest-tracker/tags for arch options
+  tagline:
+    en_us: Run A Speedtest Every Hour And Graph The Results.  See Https://hub.docker.com/r/henrywhitaker3/speedtest-tracker/tags For Arch Options
+  developer: Cloudrack
+  author: CloudRack
+  icon: https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/speedtest-tracker.png
+  thumbnail: https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/speedtest-tracker.png
+  title:
+    en_us: Speedtest Tracker
+  category: Network
+  port_map: '8765'

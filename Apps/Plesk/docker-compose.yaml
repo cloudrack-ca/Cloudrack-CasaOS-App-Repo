@@ -1,0 +1,45 @@
+name: plesk
+services:
+  plesk:
+    container_name: plesk
+    image: plesk/plesk
+    labels:
+      icon: https://icon.casaos.io/main/all/plesk.png
+    ports:
+      - target: 8880
+        published: "8880"
+        protocol: tcp
+      - target: 80
+        published: "80"
+        protocol: tcp
+      - target: 8443
+        published: "8443"
+        protocol: tcp
+      - target: 21
+        published: "21"
+        protocol: tcp
+      - target: 443
+        published: "443"
+        protocol: tcp
+    privileged: true
+    restart: unless-stopped
+    volumes:
+      - type: bind
+        source: /DATA/AppData/$AppID/sys/fs/cgroup
+        target: /sys/fs/cgroup
+    network_mode: bridge
+x-casaos:
+  author: plesk
+  category: server
+  hostname: 10.0.0.202
+  icon: https://icon.casaos.io/main/all/plesk.png
+  index: /
+  port_map: "8880"
+  scheme: http
+  store_app_id: powerful-plesk
+  title:
+    custom: plesk
+  architectures:
+    - amd64
+    - arm64
+    - arm

@@ -1,0 +1,81 @@
+name: linuxserver-openvscode-server
+services:
+  app:
+    environment:
+      - CONNECTION_SECRET=
+      - CONNECTION_TOKEN=
+      - PGID=1000
+      - PUID=1000
+      - SUDO_PASSWORD=
+      - SUDO_PASSWORD_HASH=
+      - TZ=Etc/UTC
+    image: linuxserver/openvscode-server:1.82.2
+    labels:
+      icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/openvscode-server-logo.png
+    ports:
+      - target: 3000
+        published: "3000"
+        protocol: tcp
+    restart: unless-stopped
+    volumes:
+      - type: bind
+        source: /DATA/AppData/$AppID/config
+        target: /config
+    x-casaos:
+      envs:
+        - container: PUID
+          description:
+            en_us: for UserID
+        - container: PGID
+          description:
+            en_us: for GroupID
+        - container: TZ
+          description:
+            en_us: specify a timezone to use, see this list.
+        - container: CONNECTION_TOKEN
+          description:
+            en_us: Optional security token for accessing the Web UI (ie. supersecrettoken).
+        - container: CONNECTION_SECRET
+          description:
+            en_us: Optional path to a file inside the container that contains the security
+              token for accessing the Web UI (ie. /path/to/file). Overrides
+              CONNECTION_TOKEN.
+        - container: SUDO_PASSWORD
+          description:
+            en_us: If this optional variable is set, user will have sudo access in the
+              openvscode-server terminal with the specified password.
+        - container: SUDO_PASSWORD_HASH
+          description:
+            en_us: Optionally set sudo password via hash (takes priority over SUDO_PASSWORD
+              var). Format is .
+    networks:
+      - default
+    privileged: false
+    container_name: ""
+networks:
+  default:
+    name: linuxserver-openvscode-server_default
+x-casaos:
+  architectures:
+    - amd64
+    - arm64
+  author: WisdomSky
+  category: LinuxServer.io
+  description:
+    en_us: Openvscode-server provides a version of VS Code that runs a server on a
+      remote machine and allows access through a modern web browser.
+  developer: LinuxServer.io
+  hostname: 10.0.0.202
+  icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/openvscode-server-logo.png
+  index: /
+  main: app
+  port_map: "3000"
+  scheme: http
+  store_app_id: linuxserver-openvscode-server
+  tagline:
+    en_us: Provides a version of VS Code that runs a server on a remote machine and
+      allows access through a modern web browser.
+  thumbnail: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/openvscode-server-logo.png
+  title:
+    custom: ""
+    en_us: Openvscode server

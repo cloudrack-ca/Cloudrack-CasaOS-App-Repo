@@ -1,0 +1,74 @@
+name: humhub
+services:
+  db:
+    container_name: db
+    environment:
+      - MYSQL_DATABASE=humhub
+      - MYSQL_PASSWORD=humhub
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_USER=humhub
+    image: mariadb:10.2
+    labels:
+      icon: https://products.containerize.com/social-network-platforms/humhub/menu_image.png
+    ports:
+      - target: 3306
+        published: "3306"
+        protocol: tcp
+    privileged: true
+    restart: unless-stopped
+    volumes:
+      - type: bind
+        source: /DATA/AppData/$AppID/var/lib/mysql
+        target: /var/lib/mysql
+    network_mode: bridge
+  humhub:
+    container_name: humhub
+    environment:
+      - HUMHUB_DB_HOST=db:3306
+      - HUMHUB_DB_PASSWORD=humhub
+      - HUMHUB_DB_USER=humhub
+      - PHP_MAX_EXECUTION_TIME=600
+      - PHP_MEMORY_LIMIT=1G
+      - PHP_POST_MAX_SIZE=256M
+      - PHP_TIMEZONE=EST
+      - PHP_UPLOAD_MAX_FILESIZE=1G
+    image: mriedmann/humhub:stable
+    labels:
+      icon: https://products.containerize.com/social-network-platforms/humhub/menu_image.png
+    links:
+      - db:db
+    ports:
+      - target: 80
+        published: "8081"
+        protocol: tcp
+    restart: unless-stopped
+    volumes:
+      - type: bind
+        source: /DATA/AppData/$AppID/var/www/localhost/htdocs/protected/config
+        target: /var/www/localhost/htdocs/protected/config
+      - type: bind
+        source: /DATA/AppData/$AppID/var/www/localhost/htdocs/uploads
+        target: /var/www/localhost/htdocs/uploads
+      - type: bind
+        source: /DATA/AppData/$AppID/var/www/localhost/htdocs/protected/modules
+        target: /var/www/localhost/htdocs/protected/modules
+      - type: bind
+        source: /DATA/AppData/$AppID/var/www/localhost/htdocs/uploads/profile_image
+        target: /var/www/localhost/htdocs/uploads/profile_image
+    network_mode: bridge
+    privileged: false
+x-casaos:
+  architectures:
+    - amd64
+    - arm64
+    - arm
+  author: Cloudrack
+  category: cms
+  hostname: 10.0.0.202
+  icon: https://products.containerize.com/social-network-platforms/humhub/menu_image.png
+  index: /
+  port_map: "8081"
+  scheme: http
+  store_app_id: humhub
+  title:
+    custom: HumHub

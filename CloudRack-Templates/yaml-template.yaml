@@ -1,0 +1,30 @@
+name: name-of-app
+services:
+  name-of-service:
+    container_name: name-of-container
+    image: IMAGE-HERE
+    ports:
+      - target: 3000
+        published: "3004"
+        protocol: tcp
+    privileged: false
+    restart: always
+    network_mode: bridge
+x-casaos:
+  author: name-of-author
+  category: name-of-category
+  developer: developers-name
+  icon: https://image icon url
+  index: /
+  port_map: "3004"
+  scheme: http
+  store_app_id: store-app-id-name
+  title:
+    custom: title-of-app
+  architectures:
+    - amd64
+    - arm64
+    - ppc64le
+    - s390x
+    - "386"
+    - arm

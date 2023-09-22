@@ -1,5 +1,5 @@
 # Cloudrack CasaOS Apps
-#### [`CasaOS.io Website`](https://www.casaos.io/) | [`CloudRack - You Are Here 😀`](https://github.com/cloudrack-ca/Cloudrack-CasaOS-App-Repo/README.md) 
+#### [`CasaOS.io Website`](https://www.casaos.io/) | [`CloudRack - You Are Here 😀`](https://github.com/cloudrack-ca/Cloudrack-CasaOS-App-Repo#readme) 
 [`Our Discord`](https://discord.me/cloudrack) | [`How to Add Apps to CasaOS`](https://github.com/cloudrack-ca/Cloudrack-CasaOS-App-Repo/#how-to-add-the-app-store) | [`Live Demo CasaOS`](http://demo.casaos.io/)
 ```md
 # Login Credentials For Demoing CasaOS - Link Above

@@ -1,71 +1,71 @@
-name: cloudrack-flarum
-services:
-  flarum:
-    container_name: flarum
-    environment:
-      - DB_HOST=mariadb
-      - DB_NAME=flarum
-      - DB_PASS=db-password
-      - DB_PORT=3306
-      - DB_PREF=flarum_
-      - DB_USER=flarum
-      - FLARUM_ADMIN_MAIL=admin@example.com
-      - FLARUM_ADMIN_PASS=12345678
-      - FLARUM_ADMIN_USER=admin
-      - FLARUM_TITLE=Flarum Dockerized
-      - FORUM_URL=http://10.0.0.202
-    image: mondedie/flarum:latest
-    ports:
-      - target: 8888
-        published: "80"
-        protocol: tcp
-    restart: unless-stopped
-    volumes:
-      - type: bind
-        source: /DATA/AppData/$AppID/assets
-        target: /flarum/app/public/assets
-      - type: bind
-        source: /DATA/AppData/$AppID/extensions
-        target: /flarum/app/extensions
-      - type: bind
-        source: /DATA/AppData/$AppID/storage/logs
-        target: /flarum/app/storage/logs
-      - type: bind
-        source: /DATA/AppData/$AppID/nginx
-        target: /etc/nginx/flarum
-    network_mode: bridge
-    privileged: false
-  mariadb:
-    container_name: mariadb
-    environment:
-      - MYSQL_DATABASE=flarum
-      - MYSQL_PASSWORD=db-password
-      - MYSQL_ROOT_PASSWORD=db-root-password
-      - MYSQL_USER=flarum
-    image: mariadb:10.5
-    ports:
-      - target: 3306
-        published: "3306"
-        protocol: tcp
-    restart: unless-stopped
-    volumes:
-      - type: bind
-        source: /DATA/AppData/$AppID/mysql/db
-        target: /var/lib/mysql
-    network_mode: bridge
-    privileged: false
-x-casaos:
-  author: Cloudrack
-  category: cms
-  hostname: 10.0.0.202
-  icon: https://th.bing.com/th/id/R.af1aea0a6379ac4c47a79dd54981c7a2?rik=quv0Sb69jVtqpA&riu=http%3a%2f%2fassets.stickpng.com%2fthumbs%2f62a37be36209494ec2b17080.png&ehk=Hz4bV9CCt6%2fBVyRoMUkFUEsHnbzqZ4PUaoCCrCNxrpE%3d&risl=&pid=ImgRaw&r=0
-  index: /
-  port_map: "80"
-  scheme: http
-  store_app_id: cloudrack-flarum
-  title:
-    custom: flarum
-  architectures:
-    - amd64
-    - arm64
-    - arm
+name: cloudrack-flarum  # Name of the app (this is the name that will be used to access the app)
+services: # List of services  (this is the services that will be used by the app)
+  flarum: # Name of the container (this is the app)
+    container_name: flarum  # Name of the container (this is the name that will be used to access the container)
+    environment:  # Environment variables (this is the app configuration)
+      - DB_HOST=mariadb # Database host (this is the host that will be used to access the database)
+      - DB_NAME=flarum  # Database name (this is the database that will be used by the app)
+      - DB_PASS=db-password # Database password (this is the password that will be used to access the database)
+      - DB_PORT=3306  # Database port (this is the port that will be used to access the database)
+      - DB_PREF=flarum_ # Database prefix (this is the prefix that will be used for the database)
+      - DB_USER=flarum  # Database user (this is the user that will be used to access the database)
+      - FLARUM_ADMIN_MAIL=admin@example.com # Admin email (this is the admin email that will be used to access the app)
+      - FLARUM_ADMIN_PASS=12345678  # Admin password  (this is the admin password that will be used to access the app)
+      - FLARUM_ADMIN_USER=admin # Admin username  (this is the admin username that will be used to access the app)
+      - FLARUM_TITLE=Flarum Dockerized  # Forum title (this is the title that will be used for the app)
+      - FORUM_URL=http://10.0.0.202 # Forum URL (IP or domain)  (this is the URL where the app will be accessible publicly) (this is non optional)
+    image: mondedie/flarum:latest # Image to use this is the flarum docker image
+    ports:  # Ports to expose (this is how you expose the app to the host)
+      - target: 8888  # Port inside the container (this is the port that will be used to access the app inside the container) (this is non optional and must be set to 8888)
+        published: "80" # Port on the host  (this is the port that will be used to access the app outside the container)  (this is non optional) and can be set to any port you want
+        protocol: tcp # Protocol  (TCP is default) for UDP add :udp to the end of the port
+    restart: unless-stopped # Restart policy  (this is how the container will restart if it crashes)
+    volumes:  # Volumes to mount  (this is how you mount a directory from the host to the container)
+      - type: bind  # Bind mount  This exposes the app assets directory for the app to be stored locally (this is non optional)
+        source: /DATA/AppData/$AppID/assets # Source directory  (this is the assets directory for the app to be stored locally) (this is non optional)  
+        target: /flarum/app/public/assets # Target directory (this is the assets directory for the app inside the container) (this is non optional) (this is the assets directory inside the container)
+      - type: bind  # Bind mount This exposes the app extensions directory for the app to be stored locally (this is non optional)
+        source: /DATA/AppData/$AppID/extensions # Source directory (this is the extensions directory for the app to be stored locally) (this is non optional)
+        target: /flarum/app/extensions  # Target directory  (this is the extensions directory for the app inside the container) (this is non optional)
+      - type: bind  # Bind mount  This exposes the app logs
+        source: /DATA/AppData/$AppID/storage/logs # Source directory (this is the storage directory for the app logs to be stored locally)
+        target: /flarum/app/storage/logs  # Target directory (this is non optional) (this is the storage directory for the app inside the container)
+      - type: bind  # Bind mount This exposes the nginx config for the app
+        source: /DATA/AppData/$AppID/nginx  # Source directory (this is the nginx config for the app) (this is non optional)
+        target: /etc/nginx/flarum # Target directory (this is the nginx config for the app) (this is non optional)
+    network_mode: bridge  # Network mode (bridge is default) (this is the network mode that will be used by the app)
+    privileged: false # Privileged mode (true or false) (this is the privileged mode that will be used by the app)
+  mariadb:  # Name of the container (this is to create a database for the app)
+    container_name: mariadb # Name of the container (this is the name that will be used to access the container)
+    environment:  # Environment variables (this is the database configuration)
+      - MYSQL_DATABASE=flarum # Database name (this is the database that will be used by the app)
+      - MYSQL_PASSWORD=db-password  # Database password (this is the password that will be used to access the database)
+      - MYSQL_ROOT_PASSWORD=db-root-password  # Database root password (this is the password that will be used to access the database)
+      - MYSQL_USER=flarum # Database user (this is the user that will be used to access the database)
+    image: mariadb:10.5 # Image to use (this is the image that will be used to create the database)
+    ports:  # Ports to expose This defines ports for the container
+      - target: 3306  # Port inside the container (this is the port that will be used to access the app inside the container)
+        published: "3306" # Port on the host (this is the port that will be used to access the app outside the container)
+        protocol: tcp # Protocol TCP or UDP (TCP is default) for UDP add :udp to the end of the port
+    restart: unless-stopped # Restart policy this is how the container will restart if it crashes
+    volumes:  # Volumes to mount are needed to store the database locally
+      - type: bind  # Bind mount this is how you mount a directory from the host to the container
+        source: /DATA/AppData/$AppID/mysql/db # Source directory this is where the database will be stored locally
+        target: /var/lib/mysql  # Target directory this is where the database will be stored inside the container
+    network_mode: bridge  # Network mode  (the same as the app)
+    privileged: false # Privileged mode (true or false)
+x-casaos: # CasaOS specific options (required) (has to be at the end of the file for app to work inside CasaOS app store or it will be rejected)
+  author: Cloudrack # Author of the app (this is the author and or the organization that created the app)
+  category: cms # Category of the app (this is the category where the app will be displayed inside CasaOS app store)
+  hostname: 10.0.0.202  # Hostname of the app (IP or domain) (this is the hostname where the app will be accessible publicly)
+  icon: https://th.bing.com/th/id/R.af1aea0a6379ac4c47a79dd54981c7a2?rik=quv0Sb69jVtqpA&riu=http%3a%2f%2fassets.stickpng.com%2fthumbs%2f62a37be36209494ec2b17080.png&ehk=Hz4bV9CCt6%2fBVyRoMUkFUEsHnbzqZ4PUaoCCrCNxrpE%3d&risl=&pid=ImgRaw&r=0  # Icon of the app  (URL path)
+  index: /  # Index of the app  (URL path)  (this is the path where the app will be accessible)
+  port_map: "80"  # Port map of the app (port inside the container) (needs to be created if not 80)
+  scheme: http  # Scheme of the app (http or https)
+  store_app_id: cloudrack-flarum  # Store app ID of the app (must be unique)
+  title:  # Title of the app  (name of the app)
+    custom: flarum  # Custom title of the app (name of the app)
+  architectures:  # Architectures supported by the app (App will be hidden if the architecture is not supported)
+    - amd64 # Architecture (amd64)
+    - arm64 # Architecture (arm64)
+    - arm # Architecture (armv7)

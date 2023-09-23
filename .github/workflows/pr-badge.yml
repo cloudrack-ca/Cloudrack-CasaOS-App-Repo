@@ -1,0 +1,5 @@
+- label: "Cloudrack"
+  message: "CasaOS App Repo"
+  icon: "docker"
+  color: "blue"
+  url: "https://cloudrack.ca"

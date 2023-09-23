@@ -41,8 +41,8 @@ curl -fsSL https://get.casaos.io | sudo bash
 <widgetbot
     server="1154471425663574039"
     channel="1154473702210150491"
-    width="800"
-    height="640"
+    width="640"
+    height="800"
 ></widgetbot>
 <script src="https://cdn.jsdelivr.net/npm/@widgetbot/html-embed"></script>
 

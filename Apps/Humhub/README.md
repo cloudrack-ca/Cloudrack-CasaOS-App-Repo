@@ -1,25 +1,35 @@
 # CasaOS Dockerized - Humhub
----
-> [`Check Out All Of The Cloudrack CasaOS Apps`](https://github.com/cloudrack-ca/Cloudrack-CasaOS-App-Repo/blob/main/Apps/README.md) | [`See App`](https://github.com/cloudrack-ca/Cloudrack-CasaOS-App-Repo/tree/main/Apps/Humhub)
+
+***
+
+[`Check Out All Of The Cloudrack CasaOS Apps`](../)
+
+***
 
 ```md
 > HumHub is a free and open-source social network software written on top of the Yii PHP framework that provides an easy to use toolkit for creating and launching your own social network.
 ```
+
 ```md
 # How To Use The App & or What's Included If Basic App
 ```
+
 1. install the app and then go to http://`ip.ip.ip.ip`:`8081` if you changed your default port from `8081` please make sure to change this as well `ip.ip.ip.ip` = your exposed public IP address.
 2. during database installation make sure to set the hostname to `db` and set your `db` port to `3306` or leave it empty if you changed this port make sure to change it to the port you have chosen for the `db` make sure to set the username to `humhub` as well as password to `humhub` or whatever you have chosen for your configuration.
 3. perform install - please note you may get timed out for a bit this is due to the humhub installation taking time to complete install, please give it time if it does display a timeout error when accessing your humhub installation also if you can not get past the `next` button during installation this means that humhub is still installing give it around 1-5-10 minutes max go back to the installer window and click `next` you should now be brought to your configuration to setup your humhub installation!
----
+
+***
 
 ### Ports Used
+
 ```md
 > | 8081:80 | 3306:3306 | 
 ```
----
+
+***
 
 ### Volumes Used Humhub App
+
 ```yaml
     volumes:
       - type: bind
@@ -35,21 +45,28 @@
         source: /DATA/AppData/$AppID/var/www/localhost/htdocs/uploads/profile_image
         target: /var/www/localhost/htdocs/uploads/profile_image
 ```
+
 ### Volumes Used For Humhub DB
+
 ```yaml
     volumes:
       - type: bind
         source: /DATA/AppData/$AppID/var/lib/mysql
         target: /var/lib/mysql
 ```
-> Explanation on how To change the source that data will be saved | say your storage is called `Storage1` and it is located on `/mnt` this would mean you would change 
+
+> Explanation on how To change the source that data will be saved | say your storage is called `Storage1` and it is located on `/mnt` this would mean you would change
+
 ```yaml
         source: /DATA/AppData/$AppID/var/www/localhost/htdocs/protected/config
 ```
+
 > To
+
 ```yaml
         source: /mnt/Storage1/DATA/AppData/$AppID/var/www/localhost/htdocs/protected/config
 ```
+
 > In some situations (e.g. with [podman-compose](https://github.com/containers/podman-compose)) you have to run compose `up` twice to give it some time to create the named volumes.
 
 ## Advanced Config
@@ -58,8 +75,7 @@ This container supports some further options which can be configured via environ
 
 ### Database Config
 
-To avoid the visual installer at the first startup, set the HUMHUB_DB_PASSWORD **and** HUMHUB_DB_USER.
-If you use the `--link` argument please specify the name of the link as host (via `HUMHUB_DB_HOST`) or use `db` as linkname ( `--link <container>:db` ).
+To avoid the visual installer at the first startup, set the HUMHUB\_DB\_PASSWORD **and** HUMHUB\_DB\_USER. If you use the `--link` argument please specify the name of the link as host (via `HUMHUB_DB_HOST`) or use `db` as linkname ( `--link <container>:db` ).
 
 ```plaintext
 HUMHUB_DB_USER     []

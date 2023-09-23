@@ -2,7 +2,9 @@
 
 ***
 
-> [`Check Out All Of The Cloudrack CasaOS Apps`](../) | [`See App`](./)
+[`Check Out All Of The Cloudrack CasaOS Apps`](../)
+
+***
 
 ```md
 > Plesk provides web administrators, application developers, web professionals, hosting service providers, and infrastructure providers a ready-to-code environment to build targeted solutions on.

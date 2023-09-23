@@ -1,5 +1,11 @@
-# VSCodeServer - WIP * Work In Progress
----
-> [`Check Out All Of The Cloudrack CasaOS Apps`](https://github.com/cloudrack-ca/Cloudrack-CasaOS-App-Repo/blob/main/Apps/README.md)  | [`See App`](https://github.com/cloudrack-ca/Cloudrack-CasaOS-App-Repo/tree/main/Apps/VSCodeServer)
+# CasaOS Dockerized - VSCodeServer
+
+***
+
+[`Check Out All Of The Cloudrack CasaOS Apps`](../)
+
+***
+
+Still, Currently, A WIP as other apps are more priority.
 
 > Please note that this app is not ready for the CasaOS App Store.

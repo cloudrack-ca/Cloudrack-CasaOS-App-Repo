@@ -2,7 +2,7 @@
 
 ***
 
-[`Check Out All Of The Cloudrack CasaOS Apps`](../) | [`See App`](./)
+[`Check Out All Of The Cloudrack CasaOS Apps`](../)
 
 ***
 

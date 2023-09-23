@@ -1,20 +1,15 @@
-on:
-  push:
-    branches:
-      - main
-  pull_request:
+name: Discord Webhook
+
+on: [push]
 
 jobs:
-  send_embed:
+  git:
     runs-on: ubuntu-latest
-    name: Send an embed to Discord
     steps:
-    - name: Run the GitHub Actions Status Embed Action
-      uses: SebastiaanZ/github-status-embed-for-discord@main
+
+    - uses: actions/checkout@v2
+
+    - name: Run Discord Webhook
+      uses: johnnyhuy/actions-discord-git-webhook@main 
       with:
-        webhook_id: '1154934010955444254'  # Has to be provided as a string
-        webhook_token: ${{ secrets.webhook_token }}
-        pr_author_login: ${{ github.event.pull_request.user.login }}
-        pr_number: ${{ github.event.pull_request.number }}
-        pr_title: ${{ github.event.pull_request.title }}
-        pr_source: ${{ github.event.pull_request.head.label }}
+        webhook_url: ${{ secrets.YOUR_DISCORD_WEBHOOK_URL }}

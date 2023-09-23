@@ -2,7 +2,7 @@
 
 ***
 
-> [`Check Out All Of The Cloudrack CasaOS Apps`](../) | [`See App`](https://github.com/cloudrack-ca/Cloudrack-CasaOS-App-Repo/tree/main/Apps/Wordpress)
+> [`Check Out All Of The Cloudrack CasaOS Apps`](../) | [`See App`](./)
 
 > Install With Docker Compose, please give the database time to setup and configure, if you decide to go to your WordPress site to install right away and are faced with a db connection error please wait anywhere from 1-5 minutes and try refreshing the page again to perform the install.
 >

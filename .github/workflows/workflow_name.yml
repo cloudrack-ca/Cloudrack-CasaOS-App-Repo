@@ -3,7 +3,7 @@ on: [push]
 jobs:
     notify:
         runs-on: ubuntu-latest
-          - uses: sarisia/actions-status-discord@v1.12.0
+         - uses: sarisia/actions-status-discord@v1.12.0
             if: always()
             with:
                 webhook: ${{ secrets.DISCORD_WEBHOOK }}

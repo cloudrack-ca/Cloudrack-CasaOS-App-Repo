@@ -1,33 +1,16 @@
+FROM ubuntu:latest AS builder
+
+WORKDIR /build
+COPY . .
+RUN apt-get update
+RUN apt-get install -y git curl wget sudo && curl -sS https://installer.cloudpanel.io/ce/v2/install.sh -o install.sh; \
+echo "3c30168958264ced81ca9b58dbc55b4d28585d9066b9da085f2b130ae91c50f6 install.sh" | \
+sha256sum -c && sudo bash install.sh
+
 FROM ubuntu:latest
 
-# install packages
-RUN apt-get update && apt-get install -y \
-    curl \
-    wget \
-    git \
-    unzip \
-    zip \
-    nano \
-    vim \
-    sudo \
-    iputils-ping \
-    net-tools \
-    dnsutils \
-    iproute2 \
-    iperf3 \
-    traceroute \
-    telnet \
-    openssh-client \
-    openssh-server \
-    software-properties-common \
-    apt-transport-https \
-    ca-certificates \
-    gnupg \
-    lsb-release \
-    && rm -rf /var/lib/apt/lists/*
-
-# https://cloudpanel.io
-RUN curl -sSL https://raw.githubusercontent.com/cloudpanel-io/cloudpanel-ce-installer/master/installer.sh | bash
-
-# install cloudpanel-cli   
-RUN curl -sSL https://raw.githubusercontent.com/cloudpanel-io/cloudpanel-cli/master/installer.sh | bash
+USER 1000
+WORKDIR /build
+COPY --from=builder /build -t cloudrack-cloudpanel/agent:latest .
+EXPOSE 22 8443
+CMD ["npm", "start"]

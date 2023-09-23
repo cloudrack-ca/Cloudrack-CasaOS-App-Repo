@@ -36,6 +36,16 @@ curl -fsSL https://get.casaos.io | sudo bash
 6. [🐛] [`Flarum + README`](https://github.com/cloudrack-ca/Cloudrack-CasaOS-App-Repo/tree/main/Apps/Flarum)
 7. [⌛] [`VSCodeServer + README - WIP`](https://github.com/cloudrack-ca/Cloudrack-CasaOS-App-Repo/tree/main/Apps/VSCodeServer)
 
+# Get Social
+---
+<widgetbot
+    server="1154471425663574039"
+    channel="1154473702210150491"
+    width="800"
+    height="640"
+></widgetbot>
+<script src="https://cdn.jsdelivr.net/npm/@widgetbot/html-embed"></script>
+
 ---
 # How to add the App Store:
 ---

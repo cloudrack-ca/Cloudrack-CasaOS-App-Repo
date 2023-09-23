@@ -1,9 +1,9 @@
+# ⭐ Getting Started
+
 ---
 description: Cloudrack CasaOS Apps
 layout: landing
 ---
-
-# ⭐ Getting Started
 
 [![CodeFactor](https://www.codefactor.io/repository/github/cloudrack-ca/cloudrack-casaos-app-repo/badge)](https://www.codefactor.io/repository/github/cloudrack-ca/cloudrack-casaos-app-repo)
 

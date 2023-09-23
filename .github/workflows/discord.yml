@@ -1,5 +1,5 @@
 name: Discord Webhook
-on: [push, edit, delete, pull_request, pull_request_review, pull_request_review_comment, issues, issue_comment, commit_comment, create, delete, deployment, deployment_status, fork, gollum, label, milestone, page_build, project, project_card, project_column, public, pull_request_review, pull_request_review_comment, push, release, status, watch]]  
+on: [push, edit, delete, pull_request, pull_request_review, pull_request_review_comment, issues, issue_comment, commit_comment, create, delete, deployment, deployment_status, fork, gollum, label, milestone, page_build, project, project_card, project_column, public, pull_request_review, pull_request_review_comment, push, release, status, watch] 
 jobs:
   git:
     runs-on: ubuntu-latest

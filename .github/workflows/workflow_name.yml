@@ -1,14 +1,10 @@
 name: Discord Webhook
-
 on: [push]
-
 jobs:
   git:
     runs-on: ubuntu-latest
     steps:
-
     - uses: actions/checkout@master
-
     - name: Test Success
         uses: rjstone/discord-webhook-notify@v1
         if: success()

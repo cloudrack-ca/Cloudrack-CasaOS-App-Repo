@@ -15,7 +15,7 @@ Password:casaos
 ```bash
 curl -fsSL https://get.casaos.io | sudo bash
 ```
-#### [`Cloudrack-CasaOS-App-Repo Version Releases`](https://github.com/cloudrack-ca/Cloudrack-CasaOS-App-Repo/releases) | [`All Cloudrack CasaOS Apps`](https://github.com/cloudrack-ca/Cloudrack-CasaOS-App-Repo/blob/main/Apps/README.md)
+[`Cloudrack-CasaOS-App-Repo Version Releases`](https://github.com/cloudrack-ca/Cloudrack-CasaOS-App-Repo/releases) | [`All Cloudrack CasaOS Apps`](https://github.com/cloudrack-ca/Cloudrack-CasaOS-App-Repo/blob/main/Apps/README.md)
 
 ---
 

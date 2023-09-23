@@ -1,5 +1,7 @@
 name: Discord Webhook
-on: [push]
+on:
+  release:
+    types: [published, prereleased, created, edited, deleted, unpublished, prereleased, released, pushed, push]
 jobs:
   git:
     runs-on: ubuntu-latest
@@ -14,6 +16,6 @@ jobs:
         description: "Build and deploy to GitHub Pages"
         image: ${{ secrets.EMBED_IMAGE }}
         color: 0x0000ff
-        url: "" # optional
+        url: "https://github.com/sarisia/actions-status-discord"
         username: GitHub Actions
         avatar_url: ${{ secrets.AVATAR_URL }}

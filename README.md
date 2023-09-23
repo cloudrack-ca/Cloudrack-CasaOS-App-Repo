@@ -1,9 +1,11 @@
-# ⭐ Getting Started
-
 ---
 description: Cloudrack CasaOS Apps
-layout: landing
+layout: editorial
 ---
+
+# ⭐ Getting Started
+
+***
 
 [![CodeFactor](https://www.codefactor.io/repository/github/cloudrack-ca/cloudrack-casaos-app-repo/badge)](https://www.codefactor.io/repository/github/cloudrack-ca/cloudrack-casaos-app-repo)
 
@@ -39,11 +41,7 @@ curl -fsSL https://get.casaos.io | sudo bash
 
 <figure><img src="https://raw.githubusercontent.com/WisdomSky/CasaOS-LinuxServer-AppStore/main/tip-1.jpg" alt=""><figcaption><p>Step 1.) Go to your CasaOS dashboard.</p></figcaption></figure>
 
-
-
 ![Step 2.) Open the appstore and click Add Source button located on the right just above the apps list.](https://raw.githubusercontent.com/WisdomSky/CasaOS-LinuxServer-AppStore/main/tip-2.jpg)
-
-
 
 ![Step 3.) Paste the appstore link below by coping it and and then click Add to submit.](https://raw.githubusercontent.com/WisdomSky/CasaOS-LinuxServer-AppStore/main/tip-3.jpg)
 

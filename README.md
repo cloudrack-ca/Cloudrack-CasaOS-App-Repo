@@ -1,3 +1,7 @@
+---
+layout: landing
+---
+
 # ⭐ Getting Started
 
 ## Cloudrack CasaOS Apps

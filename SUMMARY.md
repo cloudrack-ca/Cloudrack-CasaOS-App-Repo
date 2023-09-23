@@ -10,7 +10,4 @@
   * [CasaOS Dockerized - SpeedTest Tracker](<Apps/SpeedTest Tracker/README.md>)
   * [CasaOS Dockerized - VSCodeServer](Apps/VSCodeServer/README.md)
   * [CasaOS Dockerized - Flarum](Apps/Flarum/README.md)
-* [CloudRack-Templates](CloudRack-Templates/README.md)
-  * [RELEASE-README](CloudRack-Templates/RELEASE-README.md)
-  * [CasaOS Dockerized (README TEMPLATE) - APP Name](CloudRack-Templates/README-Template.md)
 * [Contributor Covenant Code of Conduct](CODE\_OF\_CONDUCT.md)

@@ -1,0 +1,69 @@
+name: linuxserver-grav
+services:
+  app:
+    environment:
+      - PGID=1000
+      - PUID=1000
+      - TZ=Etc/UTC
+    image: linuxserver/grav:1.7.42
+    labels:
+      icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/grav-logo.png
+    ports:
+      - target: 80
+        published: "807"
+        protocol: tcp
+    restart: unless-stopped
+    volumes:
+      - type: bind
+        source: /DATA/AppData/grav/config
+        target: /config
+    x-casaos:
+      envs:
+        - container: PUID
+          description:
+            en_us: for UserID
+        - container: PGID
+          description:
+            en_us: for GroupID
+        - container: TZ
+          description:
+            en_us: specify a timezone to use, see this list.
+      ports:
+        - container: "80"
+          description:
+            en_us: Port for web frontend
+      volumes:
+        - container: /config
+          description:
+            en_us: Contains all relevant configuration files.
+    networks:
+      - app
+    privileged: false
+    container_name: "Grav"
+networks:
+  app:
+    name: app
+x-casaos:
+  architectures:
+    - amd64
+    - arm64
+  author: cloudrack-ca
+  category: Cloudrack.ca
+  description:
+    en_us: "Visit homepage:
+      https://github.com/orgs/linuxserver/packages/container/package/grav"
+  developer: LinuxServer.io
+  hostname: 10.0.0.202
+  icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/grav-logo.png
+  index: /
+  main: app
+  port_map: "80"
+  project_url: https://github.com/getgrav/grav/
+  scheme: http
+  store_app_id: linuxserver-grav
+  tagline:
+    en_us: A Fast, Simple, and Flexible, file-based Web-platform.
+  thumbnail: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/grav-logo.png
+  title:
+    custom: ""
+    en_us: Grav

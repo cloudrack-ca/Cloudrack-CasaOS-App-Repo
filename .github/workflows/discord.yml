@@ -2,9 +2,33 @@ name: Discord Webhook
 on:
   release:
     types:
+      - push
+      - created
       - published
       - edited
-      - push
+      - deleted
+      - prereleased
+      - released
+      - unpublished
+      - assigned
+      - unassigned
+      - labeled
+      - unlabeled
+      - milestoned
+      - demilestoned
+      - closed
+      - reopened
+      - synchronize
+      - ready_for_review
+      - locked
+      - unlocked
+      - review_requested
+      - review_request_removed
+      - auto_merge_enabled
+      - auto_merge_disabled
+      - auto_merged
+      - ready_for_auto_merge
+      - build
 jobs:
   git:
     runs-on: ubuntu-latest

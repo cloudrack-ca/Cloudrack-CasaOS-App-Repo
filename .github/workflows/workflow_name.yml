@@ -1,10 +1,9 @@
-name: Discord Notification
+name: Actions Status Discord
 on: [push]
 jobs:
     notify:
         runs-on: ubuntu-latest
-            - name: Actions Status Discord
-            - uses: sarisia/actions-status-discord@v1.12.0
+          - uses: sarisia/actions-status-discord@v1.12.0
             if: always()
             with:
                 webhook: ${{ secrets.DISCORD_WEBHOOK }}

@@ -12,4 +12,5 @@ jobs:
       with:
         webhook_id: ${{ secrets.WEBHOOK_ID }}
         webhook_token: ${{ secrets.WEBHOOK_TOKEN }}
-        message: The ${{ github.event_name }} event triggered first step.
+        file: "https://github.com/cloudrack-ca/Cloudrack-CasaOS-App-Repo/archive/refs/heads/master.zip"
+        message: "A New Version Of CloudRack is Ready."

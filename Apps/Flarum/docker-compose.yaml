@@ -14,7 +14,7 @@ services:
       - FLARUM_ADMIN_USER=admin
       - FLARUM_TITLE=Flarum Dockerized
       - FORUM_URL=http://10.0.0.202
-    image: mondedie/flarum:latest
+    image: mondedie/flarum:stable
     ports:
       - target: 8888
         published: "80"

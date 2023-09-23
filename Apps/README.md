@@ -18,20 +18,20 @@
 6. [🐛] [`Flarum + README`](https://github.com/cloudrack-ca/Cloudrack-CasaOS-App-Repo/tree/main/Apps/Flarum)
 7. [⌛] [`VSCodeServer + README - WIP`](https://github.com/cloudrack-ca/Cloudrack-CasaOS-App-Repo/tree/main/Apps/VSCodeServer)
 8. [✅] [`Grav + README`](https://github.com/cloudrack-ca/Cloudrack-CasaOS-App-Repo/tree/main/Apps/Grav)
-9. [🙏] [`Ghost + README`](/🙏) - Coming Soon
-10. [🙏] [`NextCloud + README`](/🙏) - Coming Soon
-11. [🙏] [`Jellyfin + README`](/🙏) - Coming Soon
-12. [🙏] [`Jitsi + README`](/🙏) - Coming Soon
-13. [🙏] [`Mattermost + README`](/🙏) - Coming Soon
-14. [🙏] [`RocketChat + README`](/🙏) - Coming Soon
-15. [🙏] [`Discourse + README`](/🙏) - Coming Soon
-16. [🙏] [`Moodle + README`](/🙏) - Coming Soon
-17. [🙏] [`OpenProject + README`](/🙏) - Coming Soon
-18. [🙏] [`OpenEdx + README`](/🙏) - Coming Soon
-19. [🙏] [`OpenMeetings + README`](/🙏) - Coming Soon
-20. [🙏] [`OpenVidu + README`](/🙏) - Coming Soon
-21. [🙏] [`OpenSlides + README`](/🙏) - Coming Soon
-22. [🙏] [`OpenBoard + README`](/🙏) - Coming Soon
-23. [🙏] [`OpenProject + README`](/🙏) - Coming Soon
+9. [🙏] [`Ghost + README`](https://github.com/cloudrack-ca/Cloudrack-CasaOS-App-Repo/tree/main) - Coming Soon
+10. [🙏] [`NextCloud + README`](https://github.com/cloudrack-ca/Cloudrack-CasaOS-App-Repo/tree/main) - Coming Soon
+11. [🙏] [`Jellyfin + README`](https://github.com/cloudrack-ca/Cloudrack-CasaOS-App-Repo/tree/main) - Coming Soon
+12. [🙏] [`Jitsi + README`](https://github.com/cloudrack-ca/Cloudrack-CasaOS-App-Repo/tree/main) - Coming Soon
+13. [🙏] [`Mattermost + README`](https://github.com/cloudrack-ca/Cloudrack-CasaOS-App-Repo/tree/main) - Coming Soon
+14. [🙏] [`RocketChat + README`](https://github.com/cloudrack-ca/Cloudrack-CasaOS-App-Repo/tree/main) - Coming Soon
+15. [🙏] [`Discourse + README`](https://github.com/cloudrack-ca/Cloudrack-CasaOS-App-Repo/tree/main) - Coming Soon
+16. [🙏] [`Moodle + README`](https://github.com/cloudrack-ca/Cloudrack-CasaOS-App-Repo/tree/main) - Coming Soon
+17. [🙏] [`OpenProject + README`](https://github.com/cloudrack-ca/Cloudrack-CasaOS-App-Repo/tree/main) - Coming Soon
+18. [🙏] [`OpenEdx + README`](https://github.com/cloudrack-ca/Cloudrack-CasaOS-App-Repo/tree/main) - Coming Soon
+19. [🙏] [`OpenMeetings + README`](https://github.com/cloudrack-ca/Cloudrack-CasaOS-App-Repo/tree/main) - Coming Soon
+20. [🙏] [`OpenVidu + README`](https://github.com/cloudrack-ca/Cloudrack-CasaOS-App-Repo/tree/main) - Coming Soon
+21. [🙏] [`OpenSlides + README`](https://github.com/cloudrack-ca/Cloudrack-CasaOS-App-Repo/tree/main) - Coming Soon
+22. [🙏] [`OpenBoard + README`](https://github.com/cloudrack-ca/Cloudrack-CasaOS-App-Repo/tree/main) - Coming Soon
+23. [🙏] [`OpenProject + README`](https://github.com/cloudrack-ca/Cloudrack-CasaOS-App-Repo/tree/main) - Coming Soon
 with more to come...
 ---

@@ -5,9 +5,9 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Checkout code
-                uses: actions/checkout@v2
+            - uses: actions/checkout@v2
             - name: Notify Discord
-                uses: distributhor/discord-webhook-notify@v1.0.0
+            - uses: distributhor/discord-webhook-notify@v1.0.0
                 with:
                     webhook_url: ${{ secrets.DISCORD_WEBHOOK_URL }} # Required - Discord webhook URL to send the notification to (https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks) 
                     message: 'New code has been pushed to the main branch!' # Required - Message to send to Discord (supports markdown) 

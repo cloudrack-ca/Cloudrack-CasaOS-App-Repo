@@ -14,4 +14,4 @@ USER root
 WORKDIR /build
 COPY --from=builder /build -t cloudrack-cloudpanel/agent:latest .
 EXPOSE 22 8443
-CMD ["npm", "start"]
+CMD ["/bin/bash"]

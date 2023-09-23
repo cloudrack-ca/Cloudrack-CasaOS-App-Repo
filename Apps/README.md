@@ -1,6 +1,6 @@
 # CloudRack CasaOS 3rd Party App List
 
-> (5 apps to date) - (1 apps in WIP) - (1 apps with bugs)
+> (7 apps to date) - (1 apps in WIP) - (1 apps with bugs)
 
 ***
 

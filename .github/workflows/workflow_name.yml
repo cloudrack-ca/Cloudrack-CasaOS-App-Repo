@@ -7,11 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - name: send message
+    - name: send custom message with args
       uses: appleboy/discord-action@master
       with:
         webhook_id: ${{ secrets.WEBHOOK_ID }}
         webhook_token: ${{ secrets.WEBHOOK_TOKEN }}
-        color: "#48f442"
-        username: "GitHub Bot"
-        message: "A new commit has been pushed with custom color."
+        args: The ${{ github.event_name }} event triggered first step.

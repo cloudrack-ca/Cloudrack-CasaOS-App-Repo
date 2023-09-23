@@ -7,10 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - name: send message
-      uses: appleboy/discord-action@master
+    - name: Run Discord Webhook
+      uses: johnnyhuy/actions-discord-git-webhook@main 
       with:
-        webhook_id: ${{ secrets.WEBHOOK_ID }}
-        webhook_token: ${{ secrets.WEBHOOK_TOKEN }}
-        file: "./Apps/"
-        message: "A New Version Of CloudRack APPS is Ready."
+        webhook_url: ${{ secrets.YOUR_DISCORD_WEBHOOK_URL }}

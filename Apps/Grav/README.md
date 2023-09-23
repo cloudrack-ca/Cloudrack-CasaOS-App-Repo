@@ -9,7 +9,8 @@ Grav is designed to have a shallow learning curve and to be easy to set up. The 
 ```
 ```md
 # How To Use The App & or What's Included If Basic App
-1.) Simply Install it, and go to your casaos or servers' publicly accessible IP address, and if you changed the default `80:` port and exposed port please make sure to navigate to that `IP.IP.IP.IP`:`port`.
+1.) Simply Install it, and go to your casaos or servers' publicly accessible IP address.
+(and if you changed the default `80:` port and exposed port please make sure to navigate to that `IP.IP.IP.IP`:`port`.)
 ```
 ---
 

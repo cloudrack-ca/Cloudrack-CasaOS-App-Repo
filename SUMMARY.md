@@ -1,6 +1,6 @@
 # Table of contents
 
-* [README](README.md)
+* [⭐ Getting Started](README.md)
 * [CloudRack CasaOS 3rd Party App List](Apps/README.md)
   * [CasaOS Dockerized - Plesk](Apps/Plesk/README.md)
   * [CasaOS Dockerized - Wordpress](Apps/Wordpress/README.md)

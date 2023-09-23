@@ -1,24 +1,20 @@
-name: Actions Status Discord
-
+name: discord message
 on:
-    push:
-        branches:
-            - main
+  schedule:
+    - cron: '0 0 * * 1,3,6'
+  workflow_dispatch:
+  push:
 
 jobs:
-    build:
-        runs-on: ubuntu-latest
 
-        steps:
-            - name: Checkout code
-                uses: actions/checkout@v2
-
-            # Add your build steps here
-
-            - name: Send Discord message
-                uses: sarisia/actions-status-discord@v1.12.0
-                with:
-                    webhook: ${{ secrets.DISCORD_WEBHOOK }}
-                    status: ${{ job.status }}
-                    title: My Workflow
-                    description: A workflow has completed successfully!
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Send Discord Notif
+        uses: sarisia/actions-status-discord@v1
+        if: always()
+        with:
+          webhook: ${{ secrets.DISCORD_WEBHOOK }}
+          status: ${{ job.status }}

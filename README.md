@@ -11,7 +11,7 @@ layout: editorial
 
 [**`CasaOS.io Website`**](https://www.casaos.io/) **|** [**`CloudRack - You Are Here 😀`**](https://cloudrack.ca/#readme)
 
-[`Our Discord`](https://discord.gg/ZDGPtGnfSb) | [`How to Add Apps to CasaOS`](https://cloudrack.ca/#how-to-add-the-app-store) | [`Live Demo CasaOS`](http://demo.casaos.io/) | [`GitBook - WIP`](https://cloudrack.gitbook.io/)
+[`Our Discord`](https://discord.gg/ZDGPtGnfSb)  | [`Live Demo CasaOS`](http://demo.casaos.io/)
 
 ```md
 # Login Credentials For Demoing CasaOS - Link Above

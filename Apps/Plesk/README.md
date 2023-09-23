@@ -1,10 +1,13 @@
-# CasaOS Dockerized - Plesk 
----
-> [`Check Out All Of The Cloudrack CasaOS Apps`](https://github.com/ThunderM16/Cloudrack-CasaOS-App-Repo/blob/main/Apps/README.md) | [`See App`](https://github.com/ThunderM16/Cloudrack-CasaOS-App-Repo/tree/main/Apps/Plesk)
+# CasaOS Dockerized - Plesk
+
+***
+
+> [`Check Out All Of The Cloudrack CasaOS Apps`](../) | [`See App`](./)
 
 ```md
 > Plesk provides web administrators, application developers, web professionals, hosting service providers, and infrastructure providers a ready-to-code environment to build targeted solutions on.
 ```
+
 ```md
 - Manage plans, subscriptions, accounts, and resellers
 - Create domains, sub-domains, and domain aliases
@@ -17,26 +20,34 @@
 - Standardize shared hosting infrastructure
 - Unify User Experience and enable Mobile
 ```
----
+
+***
 
 ### Ports Used
+
 ```md
 > | 8880:8880 | 80:80 | 8443:8443 | 443:443 | 21:21 | 8447:8447 |
 ```
----
+
+***
 
 ### Volumes Used
+
 ```yaml
      volumes:
       - type: bind
         source: /DATA/AppData/sys/fs/cgroup
         target: /usr/bin:/sys/fs/cgroup
 ```
-> To change the source that data will be saved say your storage is called `Storage1` and its located on `/mnt` this would mean you would change 
+
+> To change the source that data will be saved say your storage is called `Storage1` and its located on `/mnt` this would mean you would change
+
 ```yaml
         source: /DATA/AppData/sys/fs/cgroup
 ```
+
 > To
+
 ```yaml
         source: /mnt/Storage1/DATA/AppData/sys/fs/cgroup
 ```

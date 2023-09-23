@@ -7,7 +7,7 @@
 > > Keep in mind that this `docker-compose.yaml` is only a template and you can use it but should know what you are doing first with docker.
 > >
 > >
-> > >  Default Port `:8880`
+> > >  Default Port `80:8880`
 > > > > Make sure to change `source:` to your preferred location for files this way you can keep persistent data.
 ---
 > You may change the default database configurations to your liking

@@ -30,7 +30,7 @@ curl -fsSL https://get.casaos.io | sudo bash
 3. [✅] [`Plesk + README`](https://github.com/cloudrack-ca/Cloudrack-CasaOS-App-Repo/tree/main/Apps/Plesk)
 4. [✅] [`SpeedTest Tracker + README`](https://github.com/cloudrack-ca/Cloudrack-CasaOS-App-Repo/tree/main/Apps/SpeedTest%20Tracker)
 5. [✅] [`Humhub + README`](https://github.com/cloudrack-ca/Cloudrack-CasaOS-App-Repo/tree/main/Apps/Humhub)
-6. [🐛] [`Flarum + README`](https://github.com/cloudrack-ca/Cloudrack-CasaOS-App-Repo/tree/main/Apps/Flarum)
+6. [✅] [`Flarum + README`](https://github.com/cloudrack-ca/Cloudrack-CasaOS-App-Repo/tree/main/Apps/Flarum)
 7. [⌛] [`VSCodeServer + README - WIP`](https://github.com/cloudrack-ca/Cloudrack-CasaOS-App-Repo/tree/main/Apps/VSCodeServer)
 
 ---

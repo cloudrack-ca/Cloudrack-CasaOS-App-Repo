@@ -17,4 +17,5 @@
 > 5. [✅] [`Humhub + README`](https://github.com/cloudrack-ca/Cloudrack-CasaOS-App-Repo/tree/main/Apps/Humhub)
 > 6. [🐛] [`Flarum + README`](https://github.com/cloudrack-ca/Cloudrack-CasaOS-App-Repo/tree/main/Apps/Flarum) - WIP # Bugs have been found and I have gone into the discord community for more in-depth help.
 > 7. [⌛] `VSCodeServer + README - WIP` 
+> 8. [✅] [`Grav + README`](https://github.com/cloudrack-ca/Cloudrack-CasaOS-App-Repo/tree/main/Apps/Grav)
 ---

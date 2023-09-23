@@ -9,8 +9,9 @@ jobs:
 
     - uses: actions/checkout@v2
 
-    - name: Run Discord Webhook
-      uses: johnnyhuy/actions-discord-git-webhook@main 
+    - name: Discord notification
+      env:
+        DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+      uses: Ilshidur/action-discord@master
       with:
-        id: ${{ secrets.YOUR_DISCORD_WEBHOOK_ID }}
-        token: ${{ secrets.YOUR_DISCORD_WEBHOOK_TOKEN }}
+        args: 'The project {{ EVENT_PAYLOAD.repository.full_name }} has been deployed.'

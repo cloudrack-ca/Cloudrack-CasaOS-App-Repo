@@ -7,6 +7,7 @@
 ❌ = Not Done Yet
 ⌛ = In Development
 🐛 = Bugs Found
+🙏 = Requested
 ```
 ---
 > 1. [✅] [`WordPress + README`](https://github.com/cloudrack-ca/Cloudrack-CasaOS-App-Repo/tree/main/Apps/Wordpress)

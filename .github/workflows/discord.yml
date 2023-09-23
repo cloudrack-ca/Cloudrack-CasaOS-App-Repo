@@ -1,7 +1,10 @@
 name: Discord Webhook
 on:
   release:
-    types: [published, prereleased, created, edited, deleted, unpublished, prereleased, released, pushed, push]
+    types:
+      - published
+      - edited
+      - push
 jobs:
   git:
     runs-on: ubuntu-latest

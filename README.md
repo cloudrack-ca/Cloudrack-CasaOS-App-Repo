@@ -1,6 +1,6 @@
 # Cloudrack CasaOS Apps
-[![CodeFactor](https://www.codefactor.io/repository/github/cloudrack-ca/cloudrack-casaos-app-repo/badge)](https://www.codefactor.io/repository/github/cloudrack-ca/cloudrack-casaos-app-repo) | [`GitBook - WIP`](https://cloudrack.gitbook.io/)
-#### [`CasaOS.io Website`](https://www.casaos.io/) | [`CloudRack - You Are Here 😀`](https://cloudrack.ca#readme) 
+[![CodeFactor](https://www.codefactor.io/repository/github/cloudrack-ca/cloudrack-casaos-app-repo/badge)](https://www.codefactor.io/repository/github/cloudrack-ca/cloudrack-casaos-app-repo)
+#### [`CasaOS.io Website`](https://www.casaos.io/) | [`CloudRack - You Are Here 😀`](https://cloudrack.ca#readme)  | [`GitBook - WIP`](https://cloudrack.gitbook.io/)
 [`Our Discord`](https://discord.gg/ZDGPtGnfSb) | [`How to Add Apps to CasaOS`](https://cloudrack.ca/#how-to-add-the-app-store) | [`Live Demo CasaOS`](http://demo.casaos.io/)
 ```md
 # Login Credentials For Demoing CasaOS - Link Above

@@ -13,3 +13,4 @@ Please note if you are eager and want to attempt to use this image/app then plea
 ```docker exec -ti flarum extension remove some/extension```
 ### List all extensions
 ```docker exec -ti flarum extension list```
+> you will need to exec ether into the shell with example commands below or if you are using CasaOS please use `cd /flarum` and then run your install with `flarum extension require some/extension`

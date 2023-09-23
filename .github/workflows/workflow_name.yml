@@ -1,27 +1,36 @@
 name: Discord Webhook
-on: [push]
+on: 
+    push:
+        branches:
+            - main 
+    pull_request:
+        branches:
+            - main
+    workflow_dispatch:
+        branches:
+            - main
 jobs:
     git:
         runs-on: ubuntu-latest
         steps:
             - name: Test Success
-                if: success()
-                uses: rjstone/discord-webhook-notify@v1
-                with:
-                    severity: info
-                    details: Test Succeeded!
-                    webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
+              if: ${{ success() }}
+              uses: rjstone/discord-webhook-notify@v1
+              with:
+                  severity: info
+                  details: Test Succeeded!
+                  webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
             - name: Test Failure
-                if: failure()
-                uses: rjstone/discord-webhook-notify@v1
-                with:
-                    severity: error
-                    details: Test Failed!
-                    webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
+              if: ${{ failure() }}
+              uses: rjstone/discord-webhook-notify@v1
+              with:
+                  severity: error
+                  details: Test Failed!
+                  webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
             - name: Test Cancelled
-                if: cancelled()
-                uses: rjstone/discord-webhook-notify@v1
-                with:
-                    severity: warn
-                    details: Test Cancelled!
-                    webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
+              if: ${{ cancelled() }}
+              uses: rjstone/discord-webhook-notify@v1
+              with:
+                  severity: warn
+                  details: Test Cancelled!
+                  webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}

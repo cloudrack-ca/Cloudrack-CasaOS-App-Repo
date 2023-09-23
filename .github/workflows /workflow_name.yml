@@ -1,6 +1,10 @@
 name: Discord Webhook
-on: 
-  - push
+on:
+  release:
+    types:
+      - published
+      - edited
+      - push
 jobs:
   git:
     runs-on: ubuntu-latest
@@ -10,7 +14,7 @@ jobs:
        with:
         webhook: ${{ secrets.DISCORD_WEBHOOK }}
         status: ${{ job.status }}
-        content: "Hey <@316911818725392384>"
+        content: "Hey <@142025929454125056>"
         title: "deploy"
         description: "Build and deploy to GitHub Pages"
         image: ${{ secrets.EMBED_IMAGE }}

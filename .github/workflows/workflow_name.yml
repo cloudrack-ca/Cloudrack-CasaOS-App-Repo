@@ -3,7 +3,6 @@ on: [push]
 jobs:
     notify:
         runs-on: ubuntu-latest
-        steps:
             - name: Actions Status Discord
             - uses: sarisia/actions-status-discord@v1.12.0
             if: always()

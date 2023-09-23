@@ -36,16 +36,6 @@ curl -fsSL https://get.casaos.io | sudo bash
 6. [🐛] [`Flarum + README`](https://github.com/cloudrack-ca/Cloudrack-CasaOS-App-Repo/tree/main/Apps/Flarum)
 7. [⌛] [`VSCodeServer + README - WIP`](https://github.com/cloudrack-ca/Cloudrack-CasaOS-App-Repo/tree/main/Apps/VSCodeServer)
 
-# Get Social
----
-<widgetbot
-    server="1154471425663574039"
-    channel="1154473702210150491"
-    width="640"
-    height="800"
-></widgetbot>
-<script src="https://cdn.jsdelivr.net/npm/@widgetbot/html-embed"></script>
-
 ---
 # How to add the App Store:
 ---
@@ -69,3 +59,11 @@ Just some guy in Canada.
 > Please leave a ⭐ on this project over @ [`github`](https://github.com/cloudrack-ca/Cloudrack-CasaOS-App-Repo)
 > 
 > Props to WisdomSky for providing the needed templates to build this app store. Check his app store out to: [`https://github.com/WisdomSky/CasaOS-Coolstore`](https://github.com/WisdomSky/CasaOS-Coolstore)
+
+> The below line of code is to crate our widgetbot to this page for the time being.
+<script src='https://cdn.jsdelivr.net/npm/@widgetbot/crate@3' async defer>
+    new Crate({
+        server: '1154471425663574039', // Cloudrack CasaOS App Community
+        channel: '1154473702210150491' // #app-repo
+    })
+</script>

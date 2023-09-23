@@ -1,7 +1,5 @@
 name: discord message
 on:
-  schedule:
-    - cron: '0 0 * * 1,3,6'
   workflow_dispatch:
   push:
 jobs:

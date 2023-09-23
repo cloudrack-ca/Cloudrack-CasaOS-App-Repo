@@ -1,5 +1,6 @@
 FROM ubuntu:latest AS builder
-
+# login as root
+USER root
 WORKDIR /build
 COPY . .
 RUN apt-get update
@@ -9,7 +10,7 @@ sha256sum -c && sudo bash install.sh
 
 FROM ubuntu:latest
 
-USER 1000
+USER root
 WORKDIR /build
 COPY --from=builder /build -t cloudrack-cloudpanel/agent:latest .
 EXPOSE 22 8443

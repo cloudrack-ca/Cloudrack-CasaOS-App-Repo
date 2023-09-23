@@ -1,8 +1,15 @@
-    # Using an ID and token
+name: Discord Webhook
+
+on: [push]
+
+jobs:
+  git:
+    runs-on: ubuntu-latest
+    steps:
+
+    - uses: actions/checkout@v2
+
     - name: Run Discord Webhook
       uses: johnnyhuy/actions-discord-git-webhook@main 
       with:
-        id: ${{ secrets.YOUR_DISCORD_WEBHOOK_ID }}
-        token: ${{ secrets.YOUR_DISCORD_WEBHOOK_TOKEN }}
-
-
+        webhook_url: ${{ secrets.YOUR_DISCORD_WEBHOOK_URL }}

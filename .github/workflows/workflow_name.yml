@@ -1,36 +1,13 @@
-name: Discord Webhook
-on: 
-    push:
-        branches:
-            - main 
-    pull_request:
-        branches:
-            - main
-    workflow_dispatch:
-        branches:
-            - main
+name: Discord Notification
+on: [push]
 jobs:
-    git:
+    notify:
         runs-on: ubuntu-latest
         steps:
-            - name: Test Success
-              if: ${{ success() }}
-              uses: rjstone/discord-webhook-notify@v1
-              with:
-                  severity: info
-                  details: Test Succeeded!
-                  webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
-            - name: Test Failure
-              if: ${{ failure() }}
-              uses: rjstone/discord-webhook-notify@v1
-              with:
-                  severity: error
-                  details: Test Failed!
-                  webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
-            - name: Test Cancelled
-              if: ${{ cancelled() }}
-              uses: rjstone/discord-webhook-notify@v1
-              with:
-                  severity: warn
-                  details: Test Cancelled!
-                  webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
+            - name: Checkout code
+                uses: actions/checkout@v2
+            - name: Notify Discord
+                uses: distributhor/discord-webhook-notify@v1.0.0
+                with:
+                    webhook_url: ${{ secrets.DISCORD_WEBHOOK_URL }} # Required - Discord webhook URL to send the notification to (https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks) 
+                    message: 'New code has been pushed to the main branch!' # Required - Message to send to Discord (supports markdown) 

@@ -13,7 +13,7 @@ services:
       - FLARUM_ADMIN_USER=admin  # Flarum admin username (this is the username of the Flarum administrator)
       - FLARUM_TITLE=Flarum Dockerized  # Flarum title (this is the title of the Flarum forum)
       - FORUM_URL=http://10.0.0.202  # Forum URL (this is the URL of the Flarum forum)
-    image: flarum/flarum:1.0.4  # Image to use (this is the image that will be used to create the container)
+    image: mondedie/flarum:latest  # Image to use (this is the image that will be used to create the container)
     ports:  # Ports to expose (this defines ports for the container)
       - target: 8888  # Port inside the container (this is the port that will be used to access the application inside the container)
         published: "80"  # Port on the host (this is the port that will be used to access the application outside the container)

@@ -4,10 +4,17 @@ jobs:
     notify:
         runs-on: ubuntu-latest
         steps:
-            - name: Checkout code
-                uses: actions/checkout@v2
-            - name: Notify Discord
-                uses: distributhor/discord-webhook-notify@v1.0.0
-            - with:
-                webhook_url: ${{ secrets.DISCORD_WEBHOOK_URL }} # Required - Discord webhook URL to send the notification to (https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks) 
-                message: 'New code has been pushed to the main branch!' # Required - Message to send to Discord (supports markdown) 
+            - name: Actions Status Discord
+            - uses: sarisia/actions-status-discord@v1.12.0
+            if: always()
+            with:
+                webhook: ${{ secrets.DISCORD_WEBHOOK }}
+                status: ${{ job.status }}
+                content: "Hey <@142025929454125056>"
+                title: "deploy"
+                description: "Build and deploy to GitHub Pages"
+                image: ${{ secrets.EMBED_IMAGE }}
+                color: 0x0000ff
+                url: "https://github.com/sarisia/actions-status-discord"
+                username: GitHub Actions
+                avatar_url: ${{ secrets.AVATAR_URL }}

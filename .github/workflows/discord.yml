@@ -15,6 +15,6 @@ jobs:
         description: "Build and deploy to GitHub Pages"
         image: ${{ secrets.EMBED_IMAGE }}
         color: 0x0000ff
-        url: "https://github.com/sarisia/actions-status-discord"
+        url: "https://github.com/cloudrack-ca/Cloudrack-CasaOS-App-Repo"
         username: GitHub Actions
         avatar_url: ${{ secrets.AVATAR_URL }}

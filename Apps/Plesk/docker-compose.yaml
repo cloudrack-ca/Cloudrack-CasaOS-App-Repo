@@ -39,6 +39,14 @@ x-casaos:
   store_app_id: powerful-plesk
   title:
     custom: plesk
+  tips:
+    before_install:
+          en_us: |
+        Default Account
+
+        | Username | Password |
+        |----------|----------|
+        | `admin`    | `changeme1Q**` |
   architectures:
     - amd64
     - arm64

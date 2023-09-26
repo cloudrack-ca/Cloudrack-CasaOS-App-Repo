@@ -39,9 +39,11 @@ x-casaos:
   store_app_id: powerful-plesk
   title:
     custom: plesk
+  tagline:
+    en_us: Take control of your Minecraft servers.
   tips:
     before_install:
-          en_us: |
+        en_us: |
         Default Account
 
         | Username | Password |

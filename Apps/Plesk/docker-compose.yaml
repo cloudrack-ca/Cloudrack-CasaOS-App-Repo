@@ -9,7 +9,7 @@ services:
           memory: 15973M
     environment:
       - PLESK_PASSWORD=changeme1Q**
-      - PLESK_RESTORE=/var/www/vhosts
+      - PLESK_RESTORE=/Data/AppData/$AppID/var/www/vhosts
     image: plesk/plesk
     ports:
       - target: 80

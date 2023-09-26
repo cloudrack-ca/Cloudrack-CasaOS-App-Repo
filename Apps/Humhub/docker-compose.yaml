@@ -64,7 +64,6 @@ x-casaos:
     - arm
   author: Cloudrack
   category: cms
-  hostname: 10.0.0.202
   icon: https://products.containerize.com/social-network-platforms/humhub/menu_image.png
   index: /
   port_map: "8081"

@@ -30,7 +30,7 @@ services:
     network_mode: bridge
 x-casaos:
   author: plesk
-  category: server
+  category: Developer
   hostname: localhost
   icon: https://icon.casaos.io/main/all/plesk.png
   index: /

@@ -1,12 +1,6 @@
 name: cloudrack_dockerized_plesk
 services:
   plesk:
-    cpu_shares: 90
-    command: []
-    deploy:
-      resources:
-        limits:
-          memory: 15973M
     environment:
       - PLESK_PASSWORD=changeme1Q**
       - PLESK_RESTORE=/Data/AppData/$AppID/var/www/vhosts
@@ -51,8 +45,6 @@ services:
       - type: bind
         source: /Data/AppData/$AppID/tmp/ssl
         target: /usr/local/psa/admin/conf/ssl.key
-    devices: []
-    cap_add: []
     network_mode: bridge
     container_name: "dockerized-plesk"
 x-casaos:
@@ -66,4 +58,3 @@ x-casaos:
   store_app_id: cloudrack_plesk
   title:
     custom: plesk
-

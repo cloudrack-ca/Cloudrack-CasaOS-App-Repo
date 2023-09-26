@@ -32,13 +32,11 @@ services:
 x-casaos:
   author: plesk
   category: Developer
-  icon: https://icon.casaos.io/main/all/plesk.png
   index: /
   port_map: "8880"
   scheme: http
   store_app_id: powerful-plesk
-  title:
-    custom: plesk
+  icon: https://icon.casaos.io/main/all/plesk.png
   tagline:
     en_us: Take control of your Minecraft servers.
   tips:
@@ -49,6 +47,8 @@ x-casaos:
         | Username | Password |
         |----------|----------|
         | `admin`    | `changeme1Q**` |
+  title:
+    custom: plesk
   architectures:
     - amd64
     - arm64

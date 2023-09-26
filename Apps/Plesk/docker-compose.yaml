@@ -28,28 +28,28 @@ services:
     restart: unless-stopped
     volumes:
       - type: bind
-        source: /tmp/casaos-compose-app-788593910/data
+        source: /Data/AppData/$AppID/tmp/data
         target: /var/lib/psa/dumps
       - type: bind
-        source: /tmp/casaos-compose-app-788593910/logs
+        source: /Data/AppData/$AppID/tmp/logs
         target: /var/log/plesk
       - type: bind
-        source: /tmp/casaos-compose-app-788593910/modules
+        source: /Data/AppData/$AppID/tmp/modules
         target: /usr/local/psa/admin/modules
       - type: bind
-        source: /tmp/casaos-compose-app-788593910/lib
+        source: /Data/AppData/$AppID/tmp/lib
         target: /usr/local/psa/lib/modules
       - type: bind
-        source: /tmp/casaos-compose-app-788593910/var
+        source: /Data/AppData/$AppID/tmp/var
         target: /usr/local/psa/var/modules
       - type: bind
-        source: /tmp/casaos-compose-app-788593910/etc
+        source: /Data/AppData/$AppID/tmpetc
         target: /etc/sw
       - type: bind
-        source: /tmp/casaos-compose-app-788593910/ssl
+        source: /Data/AppData/$AppID/tmp/ssl
         target: /usr/local/psa/admin/conf/ssl.crt
       - type: bind
-        source: /tmp/casaos-compose-app-788593910/ssl
+        source: /Data/AppData/$AppID/tmp/ssl
         target: /usr/local/psa/admin/conf/ssl.key
     devices: []
     cap_add: []

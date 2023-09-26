@@ -53,7 +53,6 @@ x-casaos:
     en_us: "Visit homepage:
       https://github.com/orgs/linuxserver/packages/container/package/grav"
   developer: LinuxServer.io
-  hostname: 10.0.0.202
   icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/grav-logo.png
   index: /
   main: app

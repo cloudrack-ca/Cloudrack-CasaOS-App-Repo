@@ -1,9 +1,10 @@
 name: plesk
+version: '3'
+
 services:
   plesk:
     container_name: plesk
     image: plesk/plesk
-    user: "1000:1000"
     labels:
       icon: https://icon.casaos.io/main/all/plesk.png
     ports:

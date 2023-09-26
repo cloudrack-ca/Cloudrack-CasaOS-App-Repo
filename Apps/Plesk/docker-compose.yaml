@@ -20,7 +20,7 @@ services:
     network_mode: bridge
 x-casaos:
   author: plesk
-  category: Developer
+  category: Cloudrack.ca
   store_app_id: powerful-plesk
   main: plesk
   description:

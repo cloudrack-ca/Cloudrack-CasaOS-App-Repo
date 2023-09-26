@@ -5,25 +5,13 @@ services:
   plesk:
     container_name: plesk
     image: plesk/plesk
-    labels:
-      icon: https://icon.casaos.io/main/all/plesk.png
-    ports:
-      - target: 8880
-        published: "8880"
-        protocol: tcp
-      - target: 80
-        published: "80"
-        protocol: tcp
-      - target: 8443
-        published: "8443"
-        protocol: tcp
-      - target: 21
-        published: "21"
-        protocol: tcp
-      - target: 443
-        published: "443"
-        protocol: tcp
     privileged: true
+    ports:
+      - "8880:8880/tcp"
+      - "80:80/tcp"
+      - "8443:8443/tcp"
+      - "21:21/tcp"
+      - "443:443/tcp"
     restart: unless-stopped
     volumes:
       - type: bind
@@ -33,24 +21,25 @@ services:
 x-casaos:
   author: plesk
   category: Developer
-  index: /
-  port_map: "8880"
-  scheme: http
   store_app_id: powerful-plesk
+  main: plesk
+  description:
+    en_us: Crafty is an open source Minecraft control panel built using Tornado and AdminLTE, featuring server scheduling, a interactive console and the ability to run almost any type of Minecraft server 
+  developer: Cloudrack Team
   icon: https://icon.casaos.io/main/all/plesk.png
   tagline:
     en_us: Take control of your Minecraft servers.
+    es_es: Toma el control de tus servidores de Minecraft.
   tips:
     before_install:
-        en_us: |
+      en_us: |
         Default Account
 
         | Username | Password |
         |----------|----------|
-        | `admin`    | `changeme1Q**` |
+        | `admin`    | `crafty` |
   title:
-    custom: plesk
-  architectures:
-    - amd64
-    - arm64
-    - arm
+    en_us: Plesk
+  index: /
+  scheme: http
+  port_map: "8880"

@@ -34,7 +34,6 @@ networks:
 x-casaos:
   author: kasmweb
   category: Network
-  hostname: 10.0.0.202
   icon: https://i.ibb.co/JqVkFv4/image.png
   index: /
   port_map: "3022"

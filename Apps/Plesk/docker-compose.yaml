@@ -58,3 +58,6 @@ x-casaos:
   store_app_id: cloudrack_plesk
   title:
     custom: plesk
+  architectures:
+    - amd64
+    - arm64

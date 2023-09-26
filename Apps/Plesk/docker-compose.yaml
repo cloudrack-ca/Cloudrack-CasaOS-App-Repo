@@ -42,3 +42,8 @@ x-casaos:
   index: /
   scheme: http
   port_map: "8880"
+x-casaos:
+  architectures:
+    - amd64
+    - arm
+    - arm64

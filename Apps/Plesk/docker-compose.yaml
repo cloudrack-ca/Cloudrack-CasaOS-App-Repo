@@ -1,44 +1,69 @@
-name: plesk
+name: cloudrack_dockerized_plesk
 services:
   plesk:
-    container_name: plesk
+    cpu_shares: 90
+    command: []
+    deploy:
+      resources:
+        limits:
+          memory: 15973M
+    environment:
+      - PLESK_PASSWORD=changeme1Q**
+      - PLESK_RESTORE=/var/www/vhosts
     image: plesk/plesk
-    labels:
-      icon: https://icon.casaos.io/main/all/plesk.png
     ports:
-      - target: 8880
-        published: "8880"
-        protocol: tcp
       - target: 80
         published: "80"
         protocol: tcp
-      - target: 8443
-        published: "8443"
-        protocol: tcp
-      - target: 21
-        published: "21"
-        protocol: tcp
       - target: 443
         published: "443"
+        protocol: tcp
+      - target: 8880
+        published: "8880"
+        protocol: tcp
+      - target: 8443
+        published: "8443"
         protocol: tcp
     privileged: true
     restart: unless-stopped
     volumes:
       - type: bind
-        source: /DATA/AppData/$AppID/sys/fs/cgroup
-        target: /sys/fs/cgroup
+        source: /tmp/casaos-compose-app-788593910/data
+        target: /var/lib/psa/dumps
+      - type: bind
+        source: /tmp/casaos-compose-app-788593910/logs
+        target: /var/log/plesk
+      - type: bind
+        source: /tmp/casaos-compose-app-788593910/modules
+        target: /usr/local/psa/admin/modules
+      - type: bind
+        source: /tmp/casaos-compose-app-788593910/lib
+        target: /usr/local/psa/lib/modules
+      - type: bind
+        source: /tmp/casaos-compose-app-788593910/var
+        target: /usr/local/psa/var/modules
+      - type: bind
+        source: /tmp/casaos-compose-app-788593910/etc
+        target: /etc/sw
+      - type: bind
+        source: /tmp/casaos-compose-app-788593910/ssl
+        target: /usr/local/psa/admin/conf/ssl.crt
+      - type: bind
+        source: /tmp/casaos-compose-app-788593910/ssl
+        target: /usr/local/psa/admin/conf/ssl.key
+    devices: []
+    cap_add: []
     network_mode: bridge
+    container_name: "dockerized-plesk"
 x-casaos:
-  author: plesk
-  category: server
-  icon: https://icon.casaos.io/main/all/plesk.png
+  author: Cloudrack
+  category: Developer
+  hostname: ""
+  icon: "https://icon.casaos.io/main/all/plesk.png"
   index: /
   port_map: "8880"
   scheme: http
-  store_app_id: powerful-plesk
+  store_app_id: cloudrack_plesk
   title:
     custom: plesk
-  architectures:
-    - amd64
-    - arm64
-    - arm
+

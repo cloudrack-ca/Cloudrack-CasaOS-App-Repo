@@ -31,7 +31,6 @@ services:
 x-casaos:
   author: plesk
   category: server
-  hostname: 10.0.0.202
   icon: https://icon.casaos.io/main/all/plesk.png
   index: /
   port_map: "8880"

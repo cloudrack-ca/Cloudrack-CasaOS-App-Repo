@@ -59,8 +59,8 @@ networks:
   seafile-net:
     name: seafile_server_seafile-net
 x-casaos:
-  author: self
-  category: self
+  author: Cloudrack.ca
+  category: Cloudrack.ca
   icon: https://cdn.imgbin.com/17/6/6/imgbin-seafile-file-hosting-service-cloud-storage-computer-software-installation-raspberries-kKrnZZMLsHAFpQGRC0DLgXXdU.jpg
   index: /
   port_map: "8022"

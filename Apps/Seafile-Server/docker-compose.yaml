@@ -68,6 +68,8 @@ x-casaos:
   store_app_id: seafile_server
   title:
     custom: Seafile
+  description:
+    en_us: Plesk is the leading WebOps hosting platform to run, automate and grow applications, websites and hosting businesses. Being the only OS agnostic platform, Plesk is running on more than 384,000 servers, automating 11M+ websites and 15M+ mail boxes. Available in more than 32 languages across 140 countries, 50% of the top 100 service providers worldwide are partnering with Plesk today. 
   architectures:
     - amd64
     - arm64

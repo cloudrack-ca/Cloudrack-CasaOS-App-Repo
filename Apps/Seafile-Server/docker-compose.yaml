@@ -68,3 +68,10 @@ x-casaos:
   store_app_id: seafile_server
   title:
     custom: Seafile
+  architectures:
+    - amd64
+    - arm64
+    - ppc64le
+    - s390x
+    - "386"
+    - arm

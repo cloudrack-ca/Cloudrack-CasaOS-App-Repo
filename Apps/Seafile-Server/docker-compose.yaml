@@ -61,7 +61,6 @@ networks:
 x-casaos:
   author: self
   category: self
-  hostname: 184.107.108.153
   icon: https://cdn.imgbin.com/17/6/6/imgbin-seafile-file-hosting-service-cloud-storage-computer-software-installation-raspberries-kKrnZZMLsHAFpQGRC0DLgXXdU.jpg
   index: /
   port_map: "8022"

@@ -19,7 +19,8 @@
 1.) Simply Install it, and go to your casaos or servers' publicly accessible IP address.
 (and if you changed the default `80:` port and exposed port please make sure to navigate to that `IP.IP.IP.IP`:`port`.)
 ```
-
+# Installation of applications
+> You may install the Seafile Desktop client or phone client found on the offical website [https://www.seafile.com/en/download/](https://www.seafile.com/en/download/) more or less allowing you to sync your data to your casa.
 ***
 
 ### Ports Used

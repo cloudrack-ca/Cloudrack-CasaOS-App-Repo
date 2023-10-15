@@ -1,0 +1,81 @@
+name: seafile_server
+services:
+  db_seafile:
+    container_name: seafile-mysql
+    environment:
+      - MYSQL_LOG_CONSOLE=true
+      - MYSQL_ROOT_PASSWORD=db_dev
+    image: mariadb:10.11
+    restart: unless-stopped
+    volumes:
+      - type: bind
+        source: /opt/seafile-mysql/db
+        target: /var/lib/mysql
+    networks:
+      - seafile-net
+    privileged: false
+  memcached:
+    container_name: seafile-memcached
+    entrypoint:
+      - memcached
+      - -m
+      - "256"
+    image: memcached:1.6.18
+    restart: unless-stopped
+    networks:
+      - seafile-net
+    privileged: false
+  seafile:
+    container_name: seafile
+    depends_on:
+      db_seafile:
+        condition: service_started
+        required: true
+      memcached:
+        condition: service_started
+        required: true
+    environment:
+      - DB_HOST=db_seafile
+      - DB_ROOT_PASSWD=db_dev
+      - SEAFILE_ADMIN_EMAIL=your@email.com
+      - SEAFILE_ADMIN_PASSWORD=AVerySecureP@ssW0rd
+      - SEAFILE_SERVER_HOSTNAME=127.0.0.1:8022
+      - SEAFILE_SERVER_LETSENCRYPT=false
+      - TIME_ZONE=Etc/UTC
+    image: seafileltd/seafile-mc:latest
+    ports:
+      - target: 80
+        published: "8022"
+        protocol: tcp
+    restart: unless-stopped
+    volumes:
+      - type: bind
+        source: /DATA/AppData/Seafile/opt/seafile-data
+        target: /shared
+    networks:
+      - seafile-net
+    privileged: false
+networks:
+  seafile-net:
+    name: seafile_server_seafile-net
+x-casaos:
+  author: Cloudrack.ca
+  category: Cloudrack.ca
+  icon: https://cdn.imgbin.com/17/6/6/imgbin-seafile-file-hosting-service-cloud-storage-computer-software-installation-raspberries-kKrnZZMLsHAFpQGRC0DLgXXdU.jpg
+  index: /
+  port_map: "8022"
+  scheme: https
+  store_app_id: seafile_server
+  title:
+    custom: Seafile
+  description:
+    en_us: Seafile is an open-source, cross-platform file-hosting software system. Files are stored on a central server and can be synchronized with personal computers and mobile devices through apps. Files on the Seafile server can also be accessed directly via the server's web interface. Seafile's functionality is similar to other popular file hosting services such as Dropbox and Google Drive. The primary difference between Seafile and Dropbox/Google Drive is that Seafile is a self-hosted file sharing solution for private cloud applications. In private clouds, storage space and client connection limits are determined exclusively by the users own infrastructure and settings rather than the terms and conditions of a cloud service provider. Additionally, organizations, whose data privacy policies bar them from using public cloud services can draw on Seafile to build a file sharing system of their own.
+  tagline:
+    en_us: Seafile is an open-source file sync and share solution designed for high reliability, performance, and productivity. It allows users to sync, share, and collaborate across devices and teams. Seafile provides features similar to Dropbox, Google Drive, and Office 365, while allowing users to host the server on their own hardware. 
+  architectures:
+    - amd64
+    - arm64
+    - ppc64le
+    - s390x
+    - "386"
+    - arm
